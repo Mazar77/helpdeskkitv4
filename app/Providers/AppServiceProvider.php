@@ -111,12 +111,9 @@ class AppServiceProvider extends ServiceProvider
 
     private function configureSchema(): void
     {
-        Schemas\Components\Section::configureUsing(function (Schemas\Components\Section $section) {
-            return $section->columns(['lg' => 2]);
-        });
         Schemas\Schema::configureUsing(function (Schemas\Schema $schema) {
             return $schema
-                ->columns(['lg' => 1])
+                ->columns(null)
                 ->defaultCurrency(config('filakit.defaultCurrency'))
                 ->defaultDateDisplayFormat(config('filakit.defaultDateDisplayFormat'))
                 ->defaultIsoDateDisplayFormat(config('filakit.defaultIsoDateDisplayFormat'))
@@ -208,6 +205,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Tables\Table::configureUsing(function (Tables\Table $table) {
             return $table
+                ->filtersFormWidth('md')
+                ->paginationPageOptions([5, 10, 25, 50])
                 ->defaultCurrency(config('filakit.defaultCurrency'))
                 ->defaultDateDisplayFormat(config('filakit.defaultDateDisplayFormat'))
                 ->defaultIsoDateDisplayFormat(config('filakit.defaultIsoDateDisplayFormat'))
@@ -217,14 +216,9 @@ class AppServiceProvider extends ServiceProvider
                 ->defaultTimeDisplayFormat(config('filakit.defaultTimeDisplayFormat'))
                 ->defaultIsoTimeDisplayFormat(config('filakit.defaultIsoTimeDisplayFormat'));
         });
+
         Tables\Columns\Column::configureUsing(function (Tables\Columns\Column $column) {
             return $column->translateLabel();
-        });
-
-        Tables\Table::configureUsing(function (Tables\Table $table) {
-            return $table
-                ->filtersFormWidth('md')
-                ->paginationPageOptions([5, 10, 25, 50]);
         });
 
         Tables\Columns\ImageColumn::configureUsing(function (Tables\Columns\ImageColumn $column) {
