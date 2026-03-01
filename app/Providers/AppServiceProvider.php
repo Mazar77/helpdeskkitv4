@@ -32,16 +32,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        if (config('filakit.admin_panel_enabled', false)) {
+        if (config('helpdeskkit.admin_panel_enabled', false)) {
             $this->app->register(AdminPanelProvider::class);
         }
-        if (config('filakit.app_panel_enabled', false)) {
+        if (config('helpdeskkit.app_panel_enabled', false)) {
             $this->app->register(AppPanelProvider::class);
         }
-        if (config('filakit.guest_panel_enabled', false)) {
+        if (config('helpdeskkit.guest_panel_enabled', false)) {
             $this->app->register(GuestPanelProvider::class);
         }
-        if (config('filakit.favicon.enabled')) {
+        if (config('helpdeskkit.favicon.enabled')) {
             FilamentView::registerRenderHook(PanelsRenderHook::HEAD_START, fn (): View => view('components.favicon'));
         }
         FilamentView::registerRenderHook(PanelsRenderHook::HEAD_START, fn (): View => view('components.js-md5'));
@@ -114,14 +114,14 @@ class AppServiceProvider extends ServiceProvider
         Schemas\Schema::configureUsing(function (Schemas\Schema $schema) {
             return $schema
                 ->columns(null)
-                ->defaultCurrency(config('filakit.defaultCurrency'))
-                ->defaultDateDisplayFormat(config('filakit.defaultDateDisplayFormat'))
-                ->defaultIsoDateDisplayFormat(config('filakit.defaultIsoDateDisplayFormat'))
-                ->defaultDateTimeDisplayFormat(config('filakit.defaultDateTimeDisplayFormat'))
-                ->defaultIsoDateTimeDisplayFormat(config('filakit.defaultIsoDateTimeDisplayFormat'))
-                ->defaultNumberLocale(config('filakit.defaultNumberLocale'))
-                ->defaultTimeDisplayFormat(config('filakit.defaultTimeDisplayFormat'))
-                ->defaultIsoTimeDisplayFormat(config('filakit.defaultIsoTimeDisplayFormat'));
+                ->defaultCurrency(config('helpdeskkit.defaultCurrency'))
+                ->defaultDateDisplayFormat(config('helpdeskkit.defaultDateDisplayFormat'))
+                ->defaultIsoDateDisplayFormat(config('helpdeskkit.defaultIsoDateDisplayFormat'))
+                ->defaultDateTimeDisplayFormat(config('helpdeskkit.defaultDateTimeDisplayFormat'))
+                ->defaultIsoDateTimeDisplayFormat(config('helpdeskkit.defaultIsoDateTimeDisplayFormat'))
+                ->defaultNumberLocale(config('helpdeskkit.defaultNumberLocale'))
+                ->defaultTimeDisplayFormat(config('helpdeskkit.defaultTimeDisplayFormat'))
+                ->defaultIsoTimeDisplayFormat(config('helpdeskkit.defaultIsoTimeDisplayFormat'));
         });
     }
 
@@ -207,14 +207,14 @@ class AppServiceProvider extends ServiceProvider
             return $table
                 ->filtersFormWidth('md')
                 ->paginationPageOptions([5, 10, 25, 50])
-                ->defaultCurrency(config('filakit.defaultCurrency'))
-                ->defaultDateDisplayFormat(config('filakit.defaultDateDisplayFormat'))
-                ->defaultIsoDateDisplayFormat(config('filakit.defaultIsoDateDisplayFormat'))
-                ->defaultDateTimeDisplayFormat(config('filakit.defaultDateTimeDisplayFormat'))
-                ->defaultIsoDateTimeDisplayFormat(config('filakit.defaultIsoDateTimeDisplayFormat'))
-                ->defaultNumberLocale(config('filakit.defaultNumberLocale'))
-                ->defaultTimeDisplayFormat(config('filakit.defaultTimeDisplayFormat'))
-                ->defaultIsoTimeDisplayFormat(config('filakit.defaultIsoTimeDisplayFormat'));
+                ->defaultCurrency(config('helpdeskkit.defaultCurrency'))
+                ->defaultDateDisplayFormat(config('helpdeskkit.defaultDateDisplayFormat'))
+                ->defaultIsoDateDisplayFormat(config('helpdeskkit.defaultIsoDateDisplayFormat'))
+                ->defaultDateTimeDisplayFormat(config('helpdeskkit.defaultDateTimeDisplayFormat'))
+                ->defaultIsoDateTimeDisplayFormat(config('helpdeskkit.defaultIsoDateTimeDisplayFormat'))
+                ->defaultNumberLocale(config('helpdeskkit.defaultNumberLocale'))
+                ->defaultTimeDisplayFormat(config('helpdeskkit.defaultTimeDisplayFormat'))
+                ->defaultIsoTimeDisplayFormat(config('helpdeskkit.defaultIsoTimeDisplayFormat'));
         });
 
         Tables\Columns\Column::configureUsing(function (Tables\Columns\Column $column) {
