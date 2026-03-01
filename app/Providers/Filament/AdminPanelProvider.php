@@ -22,6 +22,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use JeffersonGoncalves\FilamentHelpDesk\FilamentHelpDeskAdminPlugin;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 use Joaopaulolndev\FilamentEditProfile\Pages\EditProfilePage;
 
@@ -73,6 +74,7 @@ class AdminPanelProvider extends PanelProvider
                 __('Settings'),
             ])
             ->plugins([
+                FilamentHelpDeskAdminPlugin::make(),
                 FilamentLogViewer::make()
                     ->navigationGroup(__('Settings')),
                 FilamentEditProfilePlugin::make()

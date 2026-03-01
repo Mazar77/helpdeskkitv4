@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
+use JeffersonGoncalves\HelpDesk\Concerns\HasTickets;
 
 /**
  * @property int $id
@@ -64,6 +65,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     use Authorizable;
     use CanResetPassword;
     use HasFactory;
+    use HasTickets;
     use MustVerifyEmail;
     use Notifiable;
 
@@ -88,7 +90,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      */
     public function canAccessPanel(Panel $panel): bool
     {
-        if ($panel->getId() === 'admin') {
+        if (in_array($panel->getId(), ['admin', 'operator'])) {
             return false;
         }
 

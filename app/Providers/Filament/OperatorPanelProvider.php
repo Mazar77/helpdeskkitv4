@@ -2,7 +2,7 @@
 
 namespace App\Providers\Filament;
 
-use App\Filament\App\Pages\Auth\Login;
+use App\Filament\Operator\Pages\Auth\Login;
 use Filament\Actions\Action;
 use Filament\Enums\ThemeMode;
 use Filament\Http\Middleware\Authenticate;
@@ -21,30 +21,30 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-use JeffersonGoncalves\FilamentHelpDesk\FilamentHelpDeskUserPlugin;
+use JeffersonGoncalves\FilamentHelpDesk\FilamentHelpDeskOperatorPlugin;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 use Joaopaulolndev\FilamentEditProfile\Pages\EditProfilePage;
 
-class AppPanelProvider extends PanelProvider
+class OperatorPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
         return $panel
-            ->id('app')
-            ->path('app')
+            ->id('operator')
+            ->path('operator')
             ->login(Login::class)
-            ->authGuard('web')
+            ->authGuard('operator')
             ->colors([
-                'primary' => Color::Green,
+                'primary' => Color::Blue,
             ])
             ->brandLogo(fn () => Vite::asset(config('helpdeskkit.favicon.logo')))
-            ->brandLogoHeight(fn () => request()->is('app/login', 'app/password-reset/*') ? '121px' : '50px')
-            ->viteTheme('resources/css/filament/app/theme.css')
+            ->brandLogoHeight(fn () => request()->is('operator/login', 'operator/password-reset/*') ? '121px' : '50px')
+            ->viteTheme('resources/css/filament/operator/theme.css')
             ->defaultThemeMode(config('helpdeskkit.theme_mode', ThemeMode::Dark))
-            ->discoverClusters(in: app_path('Filament/App/Clusters'), for: 'App\\Filament\\App\\Clusters')
-            ->discoverPages(in: app_path('Filament/App/Pages'), for: 'App\\Filament\\App\\Pages')
-            ->discoverResources(in: app_path('Filament/App/Resources'), for: 'App\\Filament\\App\\Resources')
-            ->discoverWidgets(in: app_path('Filament/App/Widgets'), for: 'App\\Filament\\App\\Widgets')
+            ->discoverClusters(in: app_path('Filament/Operator/Clusters'), for: 'App\\Filament\\Operator\\Clusters')
+            ->discoverPages(in: app_path('Filament/Operator/Pages'), for: 'App\\Filament\\Operator\\Pages')
+            ->discoverResources(in: app_path('Filament/Operator/Resources'), for: 'App\\Filament\\Operator\\Resources')
+            ->discoverWidgets(in: app_path('Filament/Operator/Widgets'), for: 'App\\Filament\\Operator\\Widgets')
             ->pages([
                 Pages\Dashboard::class,
             ])
@@ -66,8 +66,12 @@ class AppPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
+            ->navigationGroups([
+                __('Tickets'),
+                __('Settings'),
+            ])
             ->plugins([
-                FilamentHelpDeskUserPlugin::make(),
+                FilamentHelpDeskOperatorPlugin::make(),
                 FilamentEditProfilePlugin::make()
                     ->slug('my-profile')
                     ->setTitle(__('My Profile'))

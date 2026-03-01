@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
+use App\Models\Operator;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -19,6 +20,11 @@ class DatabaseSeeder extends Seeder
         Admin::factory()->create([
             'name' => 'Test Admin',
             'email' => 'admin@helpdeskkit.com',
+        ]);
+
+        Operator::factory()->create([
+            'name' => 'Test Operator',
+            'email' => 'operator@helpdeskkit.com',
         ]);
 
         User::factory()->create([
