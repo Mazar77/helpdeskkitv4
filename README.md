@@ -1,14 +1,14 @@
 <div class="filament-hidden">
 
-![helpdeskkit](https://raw.githubusercontent.com/jeffersongoncalves/helpdeskkitv4/main/art/jeffersongoncalves-helpdeskkitv4.png)
+![HelpDesk Kit](https://raw.githubusercontent.com/jeffersongoncalves/helpdeskkitv4/main/art/jeffersongoncalves-helpdeskkitv4.png)
 
 </div>
 
-# helpdeskkit Start Kit Filament 4.x and Laravel 12.x
+# HelpDesk Kit - Start Kit Filament 4.x and Laravel 12.x
 
-## About helpdeskkit
+## About HelpDesk Kit
 
-helpdeskkit is a robust starter kit built on Laravel 12.x and Filament 4.x, designed to accelerate the development of help desk and support ticket systems with a ready-to-use multi-panel structure and integrated ticket management.
+HelpDesk Kit is a robust starter kit built on Laravel 12.x and Filament 4.x, designed to accelerate the development of help desk and support ticket systems with a ready-to-use multi-panel structure and integrated ticket management.
 
 ## Features
 
@@ -57,7 +57,7 @@ filakit new my-app --kit=jeffersongoncalves/helpdeskkitv4
 
 ###  Easy Installation
 
-helpdeskkit can be easily installed using the following command:
+HelpDesk Kit can be easily installed using the following command:
 
 ```bash
 php install.php
@@ -161,7 +161,7 @@ pnpm install
 
 ## Authentication Structure
 
-helpdeskkit comes pre-configured with a multi-guard authentication system that supports three types of users:
+HelpDesk Kit comes pre-configured with a multi-guard authentication system that supports three types of users:
 
 | Guard | Model | Panel | Path | Description |
 |-------|-------|-------|------|-------------|
@@ -179,7 +179,7 @@ helpdeskkit comes pre-configured with a multi-guard authentication system that s
 
 ## Help Desk System
 
-helpdeskkit includes the `filament-help-desk` plugin, providing a complete support ticket system:
+HelpDesk Kit includes the `filament-help-desk` plugin, providing a complete support ticket system:
 
 ### Admin Panel (`/admin`)
 - Manage all tickets, departments, categories, and canned responses
@@ -309,7 +309,7 @@ Reference
 
 ## Resources
 
-helpdeskkit includes support for:
+HelpDesk Kit includes support for:
 
 - Help desk ticket management system
 - User, admin, and operator management
