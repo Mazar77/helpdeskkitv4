@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb299e1c5020a39e291dd1840619efef",
+    "content-hash": "40fc360d34177207503f832e55f1e41e",
     "packages": [
         {
             "name": "achyutn/filament-log-viewer",
@@ -2225,16 +2225,16 @@
         },
         {
             "name": "jeffersongoncalves/filament-help-desk",
-            "version": "v2.0.0",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-help-desk.git",
-                "reference": "e5a91a79dedfa34ea27408da1ad4a2bb39fd8604"
+                "reference": "60c1cead919b617244649f7412c196c3c4efead4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-help-desk/zipball/e5a91a79dedfa34ea27408da1ad4a2bb39fd8604",
-                "reference": "e5a91a79dedfa34ea27408da1ad4a2bb39fd8604",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-help-desk/zipball/60c1cead919b617244649f7412c196c3c4efead4",
+                "reference": "60c1cead919b617244649f7412c196c3c4efead4",
                 "shasum": ""
             },
             "require": {
@@ -2246,7 +2246,7 @@
             "require-dev": {
                 "larastan/larastan": "^3.0",
                 "laravel/pint": "^1.0",
-                "orchestra/testbench": "^9.0|^10.0",
+                "orchestra/testbench": "^9.0|^10.0|^11.0",
                 "pestphp/pest": "^3.0",
                 "pestphp/pest-plugin-laravel": "^3.0",
                 "pestphp/pest-plugin-livewire": "^3.0"
@@ -2286,9 +2286,16 @@
                 "tickets"
             ],
             "support": {
-                "source": "https://github.com/jeffersongoncalves/filament-help-desk/tree/v2.0.0"
+                "issues": "https://github.com/jeffersongoncalves/filament-help-desk/issues",
+                "source": "https://github.com/jeffersongoncalves/filament-help-desk/tree/v2.0.2"
             },
-            "time": "2026-02-08T01:46:36+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/jeffersongoncalves",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-03-01T20:11:17+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-logo",
